@@ -17,7 +17,7 @@ It combines vector search (semantic embeddings) and keyword search (full-text) t
     - Convert Excel files into PDF for simpler processing
     - Extract text from scanned PDFs and Excel tables using [Marker OCR](https://github.com/datalab-to/marker)
     - Extract text from other PDFs (e.g., company's reports) using [LlamaParse](https://www.llamaindex.ai/llamaparse) or [PyMuPDF4LLM](https://pymupdf.readthedocs.io/en/latest/pymupdf4llm/)
-    - Converted rows in well-structured tables clearer (LLM-friendly) chunks: 
+    - Convert rows in well-structured tables into clearer (LLM-friendly) chunks: 
     ```yaml
     id: ... 
     Name: ...
@@ -46,7 +46,7 @@ pgvector extension:
 ```sql
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
-tsvector column
+tsvector column:
 ```sql
 ALTER TABLE chunks_table ADD COLUMN tsv tsvector;
 
